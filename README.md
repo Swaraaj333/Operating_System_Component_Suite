@@ -31,3 +31,26 @@ after finding it we navigate it into the segment load or memory
 
 execution
 g) we then typecast this address to that function pointer matching start and call start and call this function in main
+
+
+
+
+#Citations:
+
+For the typecasting adress step of the assignment 
+
+
+For understanding the process of how to navigate the entry point address into the segment load into the memory.
+I have referred to this website:   https://stackoverflow.com/questions/55564620/jump-to-entry-point-of-elf-from-loader
+
+
+I understood from this line of code to do this step 
+
+int ret = ((int (*)(int, char **, char **)) elf64Ehdr.e_entry)(1, argv1, argv1);
+
+The ELF HEADERS'S entry point addr  is a memory adress.It is typecasted into a fuction pointer so that we can call it.
+And I also make sure that the address lies within the memory range where the PT_LOAD segements are mapped using mmap.
+Hence this points to the executable program.
+
+And have understood and implimented it in a simpler way suitable as per our assignment.
+
