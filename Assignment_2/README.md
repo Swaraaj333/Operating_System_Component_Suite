@@ -1,9 +1,9 @@
-#SimpleShell#
+SimpleShell
 
 
 SimpleShell is a simple version of shell program in C that works like an actual Shell. It lets us run normal commands and also commands connected with pipes. It keeps a history of all commands with details like process ID, start time, and how long each command took.
 
-#Header Files Used#
+Header Files Used
 stdio.h – For input and output functions like printf() and fgets().
 stdlib.h – For memory and process functions like malloc(), free(), and exit().
 unistd.h – For system calls like fork(), execvp(), and pipe().
@@ -13,7 +13,7 @@ signal.h – To handle signals like Ctrl+C.
 sys/wait.h – To wait for child processes using wait().
 time.h and sys/time.h – To get the current time and measure how long commands take.
 
-#Functions#
+Functions
 Input() – Reads input from the user, removes extra spaces and newlines, and returns a clean string.
 
 Input_Parser() – Splits the input into parts (arguments) that execvp can use.
